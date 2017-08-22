@@ -1,0 +1,31 @@
+{
+  "name": "form_validation",
+  "version": "1.0.0",
+  "description": "Week 3: Accessibility and Advanced Form Validation",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Demetrius-B/Form-Validation.git"
+  },
+  "keywords": [
+    "form",
+    "html",
+    "css",
+    "sass",
+    "js"
+  ],
+  "author": "Demetrius Berkeley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Demetrius-B/Form-Validation/issues"
+  },
+  "homepage": "https://github.com/Demetrius-B/Form-Validation#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
