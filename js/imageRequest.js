@@ -22,7 +22,7 @@ fetch(url, options)
 
   for (var i = 0; i < data.length; i++) {
     gallery.insertAdjacentHTML('afterbegin',
-    "<article class=imageDetails><img src=" + data[i].urls.small + "/> <p>" + data[i].user.name + "</p> <p>" + data[i].user.total_likes + "</p></article>"
+    "<article class=imageDetails><img src=" + data[i].urls.small + "/> <div class=photoDetails> <div class=nameContainer><img src=img/user-icon.svg alt=user icon/> <p>" + data[i].user.name + "</p></div> <div class=likeContainer> <img src=img/heart.svg alt=heart icon/> <p>" + data[i].user.total_likes + "</p></div></div></article>"
     )
   }
 })

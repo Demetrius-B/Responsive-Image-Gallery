@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 62.5%; }
+
+body {
+  height: 100%;
+  font-size: 1.8rem; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem; }
+  header h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 1rem; }
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5vw; }
+  section article {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    margin-bottom: 1rem;
+    position: relative; }
+    section article .photoDetails {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      background-color: black;
+      position: absolute;
+      bottom: 0%;
+      height: 8rem;
+      width: 100%; }
+      section article .photoDetails .nameContainer {
+        display: flex;
+        align-items: baseline; }
+        section article .photoDetails .nameContainer img {
+          padding-left: 1.5rem;
+          padding-right: 1rem; }
+        section article .photoDetails .nameContainer p {
+          color: white; }
+          section article .photoDetails .nameContainer p:nth-last-of-type(2) {
+            color: white;
+            padding-top: 1rem;
+            padding-bottom: 1.5rem; }
+          section article .photoDetails .nameContainer p:nth-last-of-type(1) {
+            color: white; }
+      section article .photoDetails .likeContainer {
+        display: flex;
+        align-items: baseline; }
+        section article .photoDetails .likeContainer img {
+          padding-left: 1.5rem;
+          padding-right: 1rem; }
+        section article .photoDetails .likeContainer p {
+          color: white; }
+          section article .photoDetails .likeContainer p:nth-last-of-type(2) {
+            color: white;
+            padding-top: 1rem;
+            padding-bottom: 1.5rem; }
+          section article .photoDetails .likeContainer p:nth-last-of-type(1) {
+            color: white; }
+
+@media screen and (min-width: 426px) {
+  section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-left: 0; }
+    section article {
+      width: 49vw; } }
+
+@media screen and (min-width: 769px) {
+  section {
+    padding-left: 0; }
+    section article {
+      width: 32vw; } }
