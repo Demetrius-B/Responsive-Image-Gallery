@@ -5,7 +5,19 @@ header
   justify-content: center
   padding-bottom: 1rem
   padding-top: 1rem
-  h1
+  .logo
+    display: block
+  .active
+    animation-duration: 5s
+    animation-name: spin
+    animation-iteration-count: infinite
+    transform-origin: 50% 50%
+  h1, h2
     font-size: $primary-font-size
     text-align: center
     padding-top: 1rem
+@keyframe spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(100deg)
