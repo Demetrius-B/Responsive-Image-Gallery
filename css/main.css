@@ -75,7 +75,16 @@ html {
 
 body {
   height: 100%;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0; }
+  footer a {
+    color: gray;
+    text-decoration: none; }
 
 header {
   display: flex;
@@ -84,22 +93,117 @@ header {
   padding-bottom: 1rem;
   padding-top: 1rem; }
   header .logo {
-    display: block; }
-  header .active {
+    position: relative;
+    animation-name: swimStart;
     animation-duration: 5s;
-    animation-name: spin;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%; }
-  header h1, header h2 {
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    transform: translateX(-40vw);
+    width: 40vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  header .active {
+    position: relative;
+    animation-name: swimEnd;
+    animation-duration: 5s;
+    width: 40vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  header .beforeActive {
+    position: relative;
+    transform: translateX(-40vw);
+    width: 40vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+
+@keyframes swimStart {
+  0% {
+    transform: translateX(-40vw); }
+  100% {
+    transform: translateX(calc(50vw - (40vw/2))); } }
+
+@keyframes swimEnd {
+  0% {
+    transform: translateX(calc(50vw - (40vw/2))); }
+  100% {
+    transform: translateX(100vw); } }
+  header h1 {
+    text-align: center;
+    font-size: 2rem; }
+  header h2 {
     font-size: 1.8rem;
     text-align: center;
     padding-top: 1rem; }
 
-@keyframe spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(100deg); } }
+@media screen and (min-width: 426px) {
+  header .logo {
+    position: relative;
+    animation-name: swimStart;
+    animation-duration: 5s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    transform: translateX(-18vw);
+    width: 18vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  header .active {
+    position: relative;
+    animation-name: swimEnd;
+    animation-duration: 5s;
+    width: 18vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  header .beforeActive {
+    position: relative;
+    transform: translateX(-18vw);
+    width: 18vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  @keyframes swimStart {
+    0% {
+      transform: translateX(-18vw); }
+    100% {
+      transform: translateX(calc(50vw - (18vw/2))); } }
+  @keyframes swimEnd {
+    0% {
+      transform: translateX(calc(50vw - (18vw/2))); }
+    100% {
+      transform: translateX(100vw); } } }
+
+@media screen and (min-width: 769px) {
+  header .logo {
+    position: relative;
+    animation-name: swimStart;
+    animation-duration: 5s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    transform: translateX(-12vw);
+    width: 12vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  header .active {
+    position: relative;
+    animation-name: swimEnd;
+    animation-duration: 5s;
+    width: 12vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  header .beforeActive {
+    position: relative;
+    transform: translateX(-12vw);
+    width: 12vw;
+    margin-bottom: -4rem;
+    margin-top: -1rem; }
+  @keyframes swimStart {
+    0% {
+      transform: translateX(-12vw); }
+    100% {
+      transform: translateX(calc(50vw - (12vw/2))); } }
+  @keyframes swimEnd {
+    0% {
+      transform: translateX(calc(50vw - (12vw/2))); }
+    100% {
+      transform: translateX(100vw); } } }
 
 section {
   display: flex;
@@ -116,11 +220,6 @@ section {
   overflow: hidden;
   position: relative;
   text-align: center; }
-  .imageDetails * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.45s ease;
-    transition: all 0.45s ease; }
   .imageDetails:before, .imageDetails:after {
     background-color: rgba(0, 0, 0, 0.5);
     border-top: 50px solid rgba(0, 0, 0, 0.5);

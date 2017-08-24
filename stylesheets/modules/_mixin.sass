@@ -1,0 +1,38 @@
+// ==== MIXIN ====
+@mixin sharkLogo ($vw)
+  .logo
+    position: relative
+    animation-name: swimStart
+    animation-duration: 5s
+    animation-play-state: running
+    animation-fill-mode: forwards
+    transform: translateX((-$vw))
+    width: $vw
+    margin-bottom: -4rem
+    margin-top: -1rem
+  .active
+    position: relative
+    animation-name: swimEnd
+    animation-duration: 5s
+    width: $vw
+    margin-bottom: -4rem
+    margin-top: -1rem
+  .beforeActive
+    position: relative
+    transform: translateX((-$vw))
+    width: $vw
+    margin-bottom: -4rem
+    margin-top: -1rem
+
+  @keyframes swimStart
+    0%
+      transform: translateX(-$vw)
+    100%
+      transform: translateX(calc(50vw - (#{$vw}/2)))
+
+
+  @keyframes swimEnd
+    0%
+      transform: translateX(calc(50vw - (#{$vw}/2)))
+    100%
+      transform: translateX(100vw)

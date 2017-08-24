@@ -5,19 +5,23 @@ header
   justify-content: center
   padding-bottom: 1rem
   padding-top: 1rem
-  .logo
-    display: block
-  .active
-    animation-duration: 5s
-    animation-name: spin
-    animation-iteration-count: infinite
-    transform-origin: 50% 50%
-  h1, h2
+  +sharkLogo(40vw)
+
+  h1
+    text-align: center
+    font-size: 2rem
+
+  h2
     font-size: $primary-font-size
     text-align: center
     padding-top: 1rem
-@keyframe spin
-  0%
-    transform: rotate(0deg)
-  100%
-    transform: rotate(100deg)
+
+
+@media screen and (min-width:426px)
+  header
+    +sharkLogo(18vw)
+
+
+@media screen and (min-width:769px)
+  header
+    +sharkLogo(12vw)
